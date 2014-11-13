@@ -70,7 +70,7 @@ foreach ($twitter_timeline as $tweet) {
 	// 转换推特链接
 	$text = preg_replace('/(https?:\/\/t\.co\/\w+)(?=\s|$)/', '<a href=$1>$1</a>', $text);
 	// 去掉发图时的本页链接
-	$text = preg_replace('/<a href='.$tweet['extended_entities']['media']['url'].'>'.$tweet['extended_entities']['media']['url'].'<\/a>/', '', $text);
+	$text = preg_replace('/<a href='.preg_quote($tweet['extended_entities']['media'][0]['url']).'>'.preg_quote($tweet['extended_entities']['media'][0]['url']).'<\/a>/', '', $text);
 	echo '<description><![CDATA['.nl2br($text);
 	if (isset($tweet['extended_entities']['media'])) {
 		echo '<br />';

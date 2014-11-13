@@ -1,0 +1,122 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>TPRSS —— 看图没有国界</title>
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/twitrss.css">
+  <base href="index.html"></head>
+  <body>
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#top" class="navbar-brand nav-link">TPRSS</a>
+        </div> <!-- /.navbar-header -->
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#top" class="nav-link">开始使用TPRSS</a></li>
+            <li><a href="#donate" class="nav-link">捐助</a></li>
+            <!--li><a href="#code" class="nav-link">Get Code</a></li-->
+            <li><a href="#about" class="nav-link">关于</a></li>
+          </ul>
+        </div> <!-- /.navbar-collapse -->
+      </div> <!-- /.container -->
+    </nav> <!-- /.navbar -->
+
+    <div class="jumbotron" id="top">
+      <div class="container">
+        <h1>TPRSS</h1>
+        <h2>Twitter Picture RSS</h2>
+				<p>
+				</p><form method="get" action="/index.php?">
+					<label for="screen_name">推特用户:</label><br>
+					@<input type="text" placeholder="nisopict_bot_kr" value="" size="20" maxlength="140" class="input" id="screen_name" name="user"> <br>
+					<label for="cdn">使用国内CDN?:</label> 
+					<input type="checkbox" style="margin-left:1.2em" id="cdn" name="cdn"><br>
+					<label for="submit" class="hid"> &nbsp; </label>
+					<input type="submit" id="fetch" value=" 生成RSS " class="btn btn-primary btn-lg">
+				</form>
+				<p></p>
+      </div> <!-- /.container -->
+    </div> <!-- /.jumbotron -->
+
+    <div class="container">
+      <h3 id="donate" class="subhead">捐助</h3>
+      <div class="row">
+        <div class="col-md-8 col-sm-6 benefit">
+          <!--div class="benefit-ball">
+            <span class="glyphicon glyphicon-home"></span>
+          </div-->
+          <h3>如果你想支持这个项目</h3>
+					<p>这个项目的主体现在运行在Openshift的免费空间中，国内CDN来自Coding的演示页面。这个项目到现在还没有支出，预计很长一段时间内也不会有。在免费空间无法承载它之前，我会努力维持这个项目的正常运转，寻找合适的免费服务来托管它，这个项目的成长也是我个人的成长。如果你喜欢这个项目，可以选择捐助。也许，这笔款项不会用在这个项目上，但我确实会收到你的心意，知道有人在使用它，并且对我的努力做出了肯定。</p>
+        </div> <!-- /.benefit -->
+
+        <div class="col-md-4 col-sm-6 benefit">
+          <!--div class="benefit-ball">
+            <span class="glyphicon glyphicon-cloud"></span>
+          </div-->
+          <h3>PayPal捐助</h3>
+						<a href='https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=451693529@qq.com&currency_code=USD&amount=1&r&item_name=Puteulanus%27s%20Blog&undefined_quantity=1'><img border="0" src="http://ww4.sinaimg.cn/large/9c5f9488jw1em3y5blgsoj204603m0sm.jpg" alt="Donate Me"></a>
+        </div> <!-- /.benefit -->
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+    <div class="container-alternate">
+      <div class="container">
+        <h3 id="about" class="subhead">关于这个站</h3>
+        <div class="row about">
+          <div class="col-md-10 col-md-offset-1 text-center">
+            <p>
+						第一版最开始的时候只是想简单的做个转换页，把Twitter特殊的地址转换成真实图片地址输出的。可惜做好之后发现每次拉取页面严重拖慢了响应速度，于是增加了数据库缓存图片地址。后来知道可以用OAuth协议直接从推特获取用户的时间线，又做了现在的第二版。针对国内无法访问Twitter的问题，使用了Coding的北京服务器作为图片出口，使国内用户能直接看到图。为了提高图片的加载速度，在Coding上建有本地缓存，被访问过的图片会被缓存在北京服务器上，再次访问时会直接返回。TPRSS一步一步走到现在，碰到了很多难题，也让我成长了很多。感谢对我提供帮助和意见的朋友。<br/>
+            有问题欢迎来我博客 <a href="http://www.puteulanus.com">创世神域</a> 留言。
+            </p>
+          </div> <!-- /.col-md-10 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </div> <!-- /.container-alternate -->
+
+    <footer>
+      <div class="container clearfix">
+        <p class="pull-left">
+				页面由TwitRSS.me主页修改而成，TwitRSS.me项目详见 <a href="https://github.com/ciderpunx/twitrssme">Github</a> 
+        </p>
+        <p class="pull-right">TPRSS项目暂时由 <a href="http://www.puteulanus.com">创世神域</a> 博主Puteulanus负责维护，随时可能撒手
+        </p>
+      </div> <!-- /.container -->
+    </footer>
+
+		<script type="text/javascript" defer="" async="" src="http://piwik.charlieharvey.org.uk/piwik.js"></script><script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script>
+      $(".nav-link").click(function(e) {
+        e.preventDefault();
+        var link = $(this);
+        var href = link.attr("href");
+        $("html,body").animate({scrollTop: $(href).offset().top - 80}, 500);
+        link.closest(".navbar").find(".navbar-toggle:not(.collapsed)").click();
+      });
+    </script>
+		<script type="text/javascript">
+			var _paq = _paq || [];
+			_paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+			_paq.push(["setCookieDomain", "*.twitrss.me"]);
+			_paq.push(["setDomains", ["*.twitrss.me","*.www.twitrss.me"]]);
+			_paq.push(["trackPageView"]);
+			_paq.push(["enableLinkTracking"]);
+
+			(function() {
+				var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.charlieharvey.org.uk/";
+				_paq.push(["setTrackerUrl", u+"piwik.php"]);
+				_paq.push(["setSiteId", "6"]);
+				var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+				g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
+  
+
+</body></html>

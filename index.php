@@ -17,7 +17,7 @@ if ($pic_url){
 	$rand_user_list = array('nisopict_bot_kr','nisopict_bot_k2','kneehigh_bot','akogare_ryoiki','exposed_cranium');
 	$user = $rand_user_list[rand(0,count($rand_user_list) - 1)];
 	header("HTTP/1.1 301 Moved Permanently");
-	header("Location: ".CDN_API_URL."?user={$user}");
+	header("Location: ".TPRSS_API_URL."?user={$user}");
 	exit;
 }
 // 检查是否存在用户

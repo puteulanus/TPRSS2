@@ -1,6 +1,6 @@
 <?php
 // 设定PHP层地址
-$api_url = 'https://tpress-xiguaiyong.rhcloud.com/index.php';
+$api_url = 'https://tprss-xiguaiyong.rhcloud.com/index.php';
 // 获取图片地址
 $pic = $_GET['pic'];
 if ($pic){
